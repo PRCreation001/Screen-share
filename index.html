@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Screen</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box{
+            width: 100vw;
+
+        }
+
+
+        .vid{
+            border: 1px solid black;
+            width: 50vw;
+            height: 50vh;
+        }
+
+        video{
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="vid">
+                <video id="video"  autoplay src=""></video>
+        </div>
+        <button id="start" >Start Screen Share</button>
+    </div>
+
+    <script>
+
+        start.onclick = async() =>{
+            const screen = await navigator.mediaDevices.getDisplayMedia({video:true})
+            video.srcObject = screen
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
